@@ -255,4 +255,74 @@ const backEnd = ["Node", "Express", "MongoDB"];
 const fullStack = frontEnd.concat(backEnd);
 console.log(fullStack);
 
+//? ******************************************
+console.clear();
+//? ******************************************
 
+//! The following is an array of 10 students ages:
+
+const ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24];
+
+//! Sort the array and find the min and max age
+
+const sortedAge = ages.sort((a, b) => a - b);
+console.log(sortedAge);
+
+const maxAge = Math.max(...ages);
+console.log(maxAge);
+
+const minAge = Math.min(...ages);
+console.log(minAge);
+
+//! Find the median age(one middle item or two middle items divided by two)
+
+console.log(ages.length);
+console.log(ages[ages.length / 2], ages[ages.length / 2 + 1]);
+
+//! Find the average age(all items divided by number of items)
+
+let sum = 0;
+let medianAge = 0;
+for (const age of ages) {
+  sum += age;
+}
+console.log(sum);
+medianAge = sum / ages.length;
+console.log(medianAge);
+
+//! Find the range of the ages(max minus min)
+
+let range = Math.max(...ages) - Math.min(...ages);
+console.log(range);
+
+//? ******************************************
+console.clear();
+//? ******************************************
+
+const newCountries = [
+  "Albania",
+  "Bolivia",
+  "Canada",
+  "Denmark",
+  "Ethiopia",
+  "Finland",
+  "Germany",
+  "Hungary",
+  "Ireland",
+  "Japan",
+  "Kenya",
+];
+
+//! Find the middle country(ies) in the countries array
+
+let lengthOf = newCountries.length;
+console.log(lengthOf);
+let middleCountry = newCountries[(lengthOf - 1) / 2];
+console.log(middleCountry);
+
+//! Divide the countries array into two equal arrays if it is even. If countries array is not even , one more country for the first half.
+
+let firstCountries = newCountries.slice(0, (lengthOf + 1) / 2);
+console.log(firstCountries);
+let lastCountries = newCountries.slice((lengthOf + 1) / 2);
+console.log(lastCountries);
